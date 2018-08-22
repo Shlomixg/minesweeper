@@ -1,0 +1,118 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    text-align: center;
+}
+
+.header {
+    margin: 0 0 25px;
+    padding: 7.5px;
+    text-align: center;
+    font-size: 2em;
+    color: #111111;
+    background-color: #828282;
+    border-bottom: 3px solid #111111;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-levels {
+    text-align: center;
+}
+
+.btn-levels button {
+	cursor: pointer;
+    height: 45px;
+    margin: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #626262;
+    background-color: white;
+    border: 1px solid #626262;
+    /* border-radius: 5px; */
+    transition: all 0.4s linear;
+}
+
+.btn-levels button:hover {
+    color: white;
+    background-color: #626262;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.25);
+}
+
+.game {
+    display: inline-block;
+    margin: 25px auto;
+    padding: 10px;
+    text-align: center;
+    background: #828282;
+    border: 2px solid #111111;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.25);
+}
+
+.game-data {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.record-time {
+    margin: 3px;
+}
+
+.game-data ul {
+	padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.game-data li {
+    display: inline-block;
+    min-width: 50px;
+    margin: 5px;
+    vertical-align: middle;
+    font-weight: 300;
+}
+
+.mines-counter,
+.timer {
+    line-height: 3;
+    background: #DDDDDD;
+    border: 1px solid #FF4136;
+}
+
+.emoji-status {
+    cursor: pointer;
+}
+
+.tbl-sweeper {
+    margin: 5px auto;
+    border-spacing: 0px;
+}
+
+.cell {
+    width: 35px;
+    height: 35px;
+    padding: 5px 5px 2px;
+    text-align: center;
+    background: #DDDDDD;
+    border: 1px solid #626262;
+}
+
+.shownCell {
+    background: #b9b9b9;
+}
+
+.tbl-sweeper img {
+    width: 20px;
+}
