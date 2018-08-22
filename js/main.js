@@ -1,6 +1,7 @@
 'use strict';
 
-/* Global Variables */
+/* --- Global Variables --- */
+
 var MINE_IMG = '<img class="mine" src="img/mine.png" />'
 var MINE_EXPLODED_IMG = '<img class="mine" src="img/mine-exploded.png" />'
 var NOT_MINE_IMG = '<img class="mine" src="img/not-mine.png" />'

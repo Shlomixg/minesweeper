@@ -2,40 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Mine Sweeper</title>
-    <link rel="stylesheet" href="css/main.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name=theme-color content=#626262>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="img/mine.png" rel="icon">
+	<title>Mine Sweeper</title>
 </head>
 
 <body onload="initGame()">
-    <main>
-        <div class="header">
-            Mine Sweeper
-        </div>
-        <div class="btn-levels">
-            <button onclick="initGame(4)">4x4 Board</button>
-            <button onclick="initGame(6)">6x6 Board</button>
-            <button onclick="initGame(8)">8x8 Board</button>
-            <button onclick="initGame(12)">12x12 Board</button>
-            <button onclick="initGame(16)">16x30 Board</button>
-        </div>
-        <div class="game">
-            <div class="game-data">
-                <div class="record-time"></div>
-                <ul>
-                    <li class="mines-counter">0</li>
-                    <li class="emoji-status" onclick="initGame()"></li>
-                    <li class="timer"></li>
-                </ul>
-            </div>
-            <table class="tbl-sweeper">
-                <tbody class="board">
+	<main>
+		<div class="header">
+			Mine Sweeper
+		</div>
+		<div class="btn-levels">
+			<button onclick="initGame(4)">4x4 Board</button>
+			<button onclick="initGame(6)">6x6 Board</button>
+			<button onclick="initGame(8)">8x8 Board</button>
+			<button onclick="initGame(12)">12x12 Board</button>
+			<button onclick="initGame(16)">16x30 Board</button>
+		</div>
+		<div class="game">
+			<div class="game-data">
+				<div class="record-time"></div>
+				<ul>
+					<li class="mines-counter">0</li>
+					<li class="emoji-status" onclick="initGame()"></li>
+					<li class="timer"></li>
+				</ul>
+			</div>
+			<table class="tbl-sweeper">
+				<tbody class="board">
 
-                </tbody>
-            </table>
-        </div>
-    </main>
-    <script src="js/main.js"></script>
+				</tbody>
+			</table>
+		</div>
+	</main>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
