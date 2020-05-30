@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <link href="img/mine.png" rel="icon" />
+    <meta name="theme-color" content="#626262" />
+    <title>Mine Sweeper</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta name=theme-color content=#626262>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="img/mine.png" rel="icon">
-	<title>Mine Sweeper</title>
-</head>
+  <body onload="initGame()">
+    <main>
+      <header class="header">
+        <div></div>
 
-<body onload="initGame()">
-	<main>
-		<div class="header">
-			Mine Sweeper
-		</div>
-		<div class="btn-levels">
-			<button onclick="initGame(4)">4x4 Board</button>
-			<button onclick="initGame(6)">6x6 Board</button>
-			<button onclick="initGame(8)">8x8 Board</button>
-			<button onclick="initGame(12)">12x12 Board</button>
-			<button onclick="initGame(16)">16x30 Board</button>
-		</div>
-		<div class="game">
-			<div class="game-data">
-				<div class="record-time"></div>
-				<ul>
-					<li class="mines-counter">0</li>
-					<li class="emoji-status" onclick="initGame()"></li>
-					<li class="timer"></li>
-				</ul>
-			</div>
-			<table class="tbl-sweeper">
-				<tbody class="board">
+        <h1>
+          Mine Sweeper
+        </h1>
 
-				</tbody>
-			</table>
-		</div>
-	</main>
-	<script src="js/main.js"></script>
-</body>
+        <div class="theme-div">
+          <input type="checkbox" class="toggle_switch" id="checkbox_theme" />
+          <label class="theme-switch" id="theme-switch" for="checkbox_theme"></label>
+        </div>
+      </header>
 
+      <div class="btn-levels">
+        <button onclick="initGame(4)">4x4 Board</button>
+        <button onclick="initGame(6)">6x6 Board</button>
+        <button onclick="initGame(8)">8x8 Board</button>
+        <button onclick="initGame(12)">12x12 Board</button>
+        <button onclick="initGame(16)">16x30 Board</button>
+      </div>
+
+      <div class="game">
+        <div class="game-data">
+          <div class="record-time"></div>
+          <ul>
+            <li class="mines-counter">0</li>
+            <li class="emoji-status" onclick="initGame()"></li>
+            <li class="timer"></li>
+          </ul>
+        </div>
+
+        <table class="tbl-sweeper">
+          <tbody class="board"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+  </body>
 </html>
