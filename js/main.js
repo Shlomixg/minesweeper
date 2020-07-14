@@ -277,6 +277,13 @@ function showMines(board, row, col) {
   }
 }
 
+// Showing mines while game is on for debugging purpose
+document.addEventListener('keydown', function (event) {
+  if (event.keyCode == 83) {
+    showMines(gBoard, -1, -1);
+  }
+});
+
 /**
  * Convert a location object {i, j} to a selector and render a value in that element
  * @param {*} location
