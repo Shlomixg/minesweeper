@@ -34,6 +34,7 @@ function initGame(size) {
   if (size === 8) MinesCount = getRandomInteger(10, 16);
   if (size === 12) MinesCount = getRandomInteger(24, 32);
   if (size === 16) MinesCount = getRandomInteger(90, 100);
+  if (size === 20) MinesCount = 160;
 
   gLevel = { SIZE: size, MINES: MinesCount };
   gMinesCoor = [];
@@ -61,8 +62,11 @@ function initGame(size) {
 /**
  * Creating the board
  */
+// TODO: Improve if else statement
 function buildBoard() {
-  let boardLength = gLevel.SIZE === 16 ? 30 : gLevel.SIZE;
+  let boardLength = gLevel.SIZE;
+  if (gLevel.SIZE === 16) boardLength = 32;
+  else if (gLevel.SIZE === 20) boardLength = 40;
   let board = [];
   for (let i = 0; i < gLevel.SIZE; i++) {
     board[i] = [];
@@ -375,6 +379,11 @@ function displayLevelRecord() {
         localStorage.bestTime5 = gState.secsPassed;
         elRecord.textContent = `Your record is ${localStorage.bestTime5} seconds`;
       }
+    } else if (gLevel.SIZE === 20) {
+      if (gState.secsPassed < localStorage.bestTime6 || localStorage.bestTime6 === undefined) {
+        localStorage.bestTime6 = gState.secsPassed;
+        elRecord.textContent = `Your record is ${localStorage.bestTime6} seconds`;
+      }
     }
   } else {
     if (gLevel.SIZE === 4) {
@@ -396,6 +405,10 @@ function displayLevelRecord() {
     } else if (gLevel.SIZE === 16) {
       if (localStorage.bestTime5 !== undefined) {
         elRecord.textContent = `Your time record is ${localStorage.bestTime5} seconds`;
+      } else elRecord.textContent = `No record! Try to set one`;
+    } else if (gLevel.SIZE === 20) {
+      if (localStorage.bestTime6 !== undefined) {
+        elRecord.textContent = `Your time record is ${localStorage.bestTime6} seconds`;
       } else elRecord.textContent = `No record! Try to set one`;
     }
   }
